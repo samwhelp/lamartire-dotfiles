@@ -1,4 +1,16 @@
-call plug#begin('~/.local/share/nvim/plugged')
+""
+" ## Prepare
+"
+" ```
+" $ curl -fLo ~/.cache/nvim/site/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+" ```
+""
+
+let &runtimepath = '~/.cache/nvim/site' . ',' . &runtimepath
+
+
+"call plug#begin('~/.local/share/nvim/plugged')
+call plug#begin('~/.cache/nvim/plug')
 
 " Common
 Plug 'editorconfig/editorconfig-vim'
@@ -146,7 +158,8 @@ set autoread
 set cul
 set termguicolors
 set t_Co=256
-set background=light
+"set background=light
+set background=dark
 set mouse=n
 colorscheme gruvbox
 
